@@ -746,7 +746,7 @@ KNMI_deBilt%>%
          month_lab  = month.abb[month_num])%>%
   ggplot()+
   geom_line(aes(x=Day, y=TG, group=Year, col=factor(Year)))+
-  gghighlight(Year%in%(c(1990,2023)))+
+  gghighlight(Year%in%(c(1901,2023)))+
   geom_vline(xintercept = 151.5, lty=2, col="black")+
   geom_vline(xintercept = 181.5, lty=2, col="black")+
   geom_text(aes(x=151.5, label="start June", y=0), 
@@ -759,7 +759,7 @@ KNMI_deBilt%>%
   labs(x="Day of the year", 
        y="Average temperature", 
        title="Average temperature over time for the Netherlands", 
-       subtitle = "Values coming from De Bilt - we highlighted 1990 and 2023", 
+       subtitle = "Values coming from De Bilt - we highlighted 1901 and 2023", 
        caption="Source: https://www.knmi.nl/nederland-nu/klimatologie/daggegevens")
 
 KNMI_deBilt%>%
@@ -774,7 +774,7 @@ KNMI_deBilt%>%
   filter(Day%in%(151:182))%>%
   ggplot()+
   geom_line(aes(x=Day, y=TG, group=Year, col=factor(Year)))+
-  gghighlight(Year%in%(c(1990,2023)))+
+  gghighlight(Year%in%(c(1901,2023)))+
   theme_bw()+
   labs(x="Day of the year", 
        y="Average temperature", 
@@ -795,7 +795,7 @@ KNMI_deBilt%>%
   filter(Day%in%(181:212))%>%
   ggplot()+
   geom_line(aes(x=Day, y=TG, group=Year, col=factor(Year)))+
-  gghighlight(Year%in%(c(1990,2023)))+
+  gghighlight(Year%in%(c(1901,2023)))+
   theme_bw()+
   labs(x="Day of the year", 
        y="Average temperature", 
